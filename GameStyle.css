@@ -57,3 +57,13 @@ body {
   font-weight: bold;
   color: white;
 }
+.result {
+  width: 200px;
+  height: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+  display: flex;
+  background-color: green;
+}

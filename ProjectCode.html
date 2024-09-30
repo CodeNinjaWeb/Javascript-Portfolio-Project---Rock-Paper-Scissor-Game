@@ -11,17 +11,17 @@
     <div class="title"><h1>Rock Paper Scissors</h1></div>
     <div class="icons">
       <img
-        onclick="selectChoice(1)"
+        onclick="userChoice(1)"
         src="Assets/Rock_hand-removebg-preview.png"
         alt="Rock"
       />
       <img
-        onclick="selectChoice(2)"
+        onclick="userChoice(2)"
         src="Assets/Paper_hand-removebg-preview.png"
         alt="Paper"
       />
       <img
-        onclick="selectChoice(3)"
+        onclick="userChoice(3)"
         src="Assets/Scissor_Hand-removebg-preview.png"
         alt="Scissors"
       />
@@ -34,13 +34,18 @@
     </div>
     <br />
     <div class="buttonstyle">
-      <button id="submit">SUBMIT</button>
-      <button id="reset">RESET</button>
+      <button id="submit" onclick="displaydata()">SUBMIT</button>
+      <button id="reset" onclick="reset()">RESET</button>
     </div>
     <div class="end-msg">
       <h2>
         WHO WINS<img src="Assets/winning-cup.png" width="40px" height="40px" />:
       </h2>
+    </div>
+    <div class="result">
+      <script>
+        conditionCheck();
+      </script>
     </div>
   </body>
 </html>
