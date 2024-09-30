@@ -57,13 +57,15 @@ body {
   font-weight: bold;
   color: white;
 }
+.result_div {
+  width: 100%;
+  padding-left: 450px;
+}
 .result {
   width: 200px;
   height: 80px;
   font-size: 30px;
   font-weight: bold;
   color: white;
-  border: 2px solid white;
-  display: flex;
-  background-color: green;
+  text-align: center;
 }

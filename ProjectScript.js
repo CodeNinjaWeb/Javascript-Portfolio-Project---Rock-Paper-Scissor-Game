@@ -1,7 +1,7 @@
 let playerChoice;
-let randomchoice;
-let computerwins;
-let playerwins;
+let randomChoice;
+let computerWins;
+let playerWins;
 function userChoice(choice) {
   playerChoice = choice;
   computerChoice();
@@ -12,45 +12,47 @@ document.querySelectorAll(".icons img").forEach((img, index) => {
 });
 
 function computerChoice() {
-  randomchoice = Math.floor(Math.random() * 3) + 1;
+  randomChoice = Math.floor(Math.random() * 3) + 1;
 }
 
 function reset() {
   playerChoice = 0;
-  randomchoice = 0;
+  randomChoice = 0;
   console.log("Player selected: " + playerChoice);
-  console.log("Computer selected: " + randomchoice);
+  console.log("Computer selected: " + randomChoice);
 }
-//Below this Just for Displaying Data.
+
+function conditionCheck() {
+  let resultCheck = "";
+  if (playerChoice == randomChoice) {
+    resultCheck = "DRAW";
+  } else if (playerChoice == 1 && randomChoice == 2) {
+    resultCheck = "COMPUTER WINS";
+  } else if (playerChoice == 1 && randomChoice == 3) {
+    resultCheck = "PLAYER WINS";
+  } else if (playerChoice == 2 && randomChoice == 1) {
+    resultCheck = "PLAYER WINS";
+  } else if (playerChoice == 2 && randomChoice == 3) {
+    resultCheck = "COMPUTER WINS";
+  } else if (playerChoice == 3 && randomChoice == 1) {
+    resultCheck = "COMPUTER WINS";
+  } else if (playerChoice == 3 && randomChoice == 2) {
+    resultCheck = "PLAYER WINS";
+  }
+
+  document.querySelector(".result").innerHTML = resultCheck;
+}
+
 function displaydata() {
   if (
     playerChoice >= 1 &&
     playerChoice < 4 &&
-    randomchoice >= 1 &&
-    randomchoice < 4
+    randomChoice >= 1 &&
+    randomChoice < 4
   ) {
     console.log("Player selected: " + playerChoice);
-    console.log("Computer selected: " + randomchoice);
-  }
-}
+    console.log("Computer selected: " + randomChoice);
 
-displaydata();
-//Above this Just for Displaying Data.
-
-function conditionCheck() {
-  if (playerChoice == randomchoice) {
-    console.log("DRAW");
-  } else if (playerChoice == 1 && randomchoice == 2) {
-    console.log("COMPUTER WINS");
-  } else if (playerChoice == 1 && randomchoice == 3) {
-    console.log("PLAYER WINS");
-  } else if (playerChoice == 2 && randomchoice == 1) {
-    console.log("PLAYER WINS");
-  } else if (playerChoice == 2 && randomchoice == 3) {
-    console.log("COMPUTER WINS");
-  } else if (playerChoice == 3 && randomchoice == 1) {
-    console.log("COMPUTER WINS");
-  } else if (playerChoice == 3 && randomchoice == 2) {
-    console.log("PLAYER WINS");
+    conditionCheck();
   }
 }
