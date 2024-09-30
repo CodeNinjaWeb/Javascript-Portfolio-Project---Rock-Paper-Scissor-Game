@@ -13,4 +13,47 @@ body {
   justify-content: center;
   width: 100%;
   display: flex;
+  color: white;
+  font-size: medium;
+  column-gap: 20px;
+}
+.icon-labels {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  color: white;
+  font-size: 26px;
+  column-gap: 180px;
+}
+.icons :hover {
+  background-color: lightgray;
+  border-radius: 10px;
+}
+.buttonstyle {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  column-gap: 20px;
+}
+#submit {
+  background-color: green;
+  color: white;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+}
+#reset {
+  background-color: red;
+  color: white;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+}
+.end-msg {
+  width: 100%;
+  text-align: left;
+  font-size: 30px;
+  padding-left: 20px;
+  font-weight: bold;
+  color: white;
 }
