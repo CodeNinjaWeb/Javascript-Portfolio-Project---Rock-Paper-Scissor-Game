@@ -1,4 +1,5 @@
 body {
+  margin-top: 0px;
   background-color: black;
 }
 
@@ -53,17 +54,26 @@ body {
   width: 100%;
   text-align: left;
   font-size: 30px;
-  padding-left: 20px;
   font-weight: bold;
   color: white;
 }
+.player_data {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.computerData {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
 .result_div {
   width: 100%;
-  padding-left: 450px;
+  text-align: center;
+  background-color: green;
 }
 .result {
-  width: 200px;
-  height: 80px;
   font-size: 30px;
   font-weight: bold;
   color: white;

@@ -18,8 +18,10 @@ function computerChoice() {
 function reset() {
   playerChoice = 0;
   randomChoice = 0;
-  console.log("Player selected: " + playerChoice);
-  console.log("Computer selected: " + randomChoice);
+
+  document.querySelector(".player_info").innerHTML = "";
+  document.querySelector(".computer_info").innerHTML = "";
+  document.querySelector(".result").innerHTML = "";
 }
 
 function conditionCheck() {
@@ -40,6 +42,12 @@ function conditionCheck() {
     resultCheck = "PLAYER WINS";
   }
 
+  document.querySelector(".player_info").innerHTML =
+    "Player Selected: " + playerChoice;
+
+  document.querySelector(".computer_info").innerHTML =
+    "Computer Selected: " + randomChoice;
+
   document.querySelector(".result").innerHTML = resultCheck;
 }
 
@@ -52,6 +60,8 @@ function displaydata() {
   ) {
     console.log("Player selected: " + playerChoice);
     console.log("Computer selected: " + randomChoice);
+
+    console.log("Player selected: " + playerChoice);
 
     conditionCheck();
   }
