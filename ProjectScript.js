@@ -58,11 +58,8 @@ function displaydata() {
     randomChoice >= 1 &&
     randomChoice < 4
   ) {
-    console.log("Player selected: " + playerChoice);
-    console.log("Computer selected: " + randomChoice);
-
-    console.log("Player selected: " + playerChoice);
-
+    // console.log("Player selected: " + playerChoice);
+    // console.log("Computer selected: " + randomChoice);
     conditionCheck();
   }
 }
